@@ -13,6 +13,8 @@ I chose to make the service super simple.  It returns a JSON array synchronously
 An option I considered was to submit the calculation of the prime array to an ExecutorService and store a Future against a UUID, then return HTTP 202 with a
 Location header that contained a URL to query the progress of that job.  In the absence of explicit stipulation either way, I went with the simplest approach - synchronous.
 
+In the end, I went ahead and did this anyway, just to compare and contract.  The async version is [here](https://github.com/mike-hogan/async-primes)
+
 Apart from Maven as the build tool, I was free to choose frameworks.
 I went with [Utterlyidle](https://github.com/bodar/utterlyidle) and [Totallylazy](https://github.com/bodar/totallylazy)
 
